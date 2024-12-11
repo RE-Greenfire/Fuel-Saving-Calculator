@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #eef7f0;
+}
+
+.heat-solution-container {
+  max-width: 1200px;
+  margin: 0 auto 6rem auto;
+}
+
+.heat-solution-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.heat-solution-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Barlow Condensed";
+}
+
+.heat-solution-subtitle {
+  color: #666;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-family: "Montserrat";
+}
+
+.calculator-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.user-input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #333;
+  font-family: "Barlow Condensed";
+  font-weight: 600;
+}
+
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown-wrapper::after {
+  content: "▼";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #d1e7d5;
+  border-radius: 5px;
+  background-color: #e8f5eb;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.calculate-button {
+  background-color: #008f39;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calculate-button:hover {
+  background-color: #007830;
+}
+
+.comparison-data-table {
+  background-color: #e8f5eb;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: "Montserrat";
+}
+
+.comparison-data-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comparison-data-table th,
+.comparison-data-table td {
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #d1e7d5;
+}
+
+.comparison-data-table th {
+  background-color: #d1e7d5;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.comparison-data-table td:first-child {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: left;
+}
+
+.comparison-data-table tr:nth-child(even) {
+  background-color: #f0f8f1;
+}
+
+@media (max-width: 968px) {
+  .calculator-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .user-input-form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  .heat-solution-title {
+    font-size: 1.5rem;
+  }
+
+  .comparison-data-table {
+    font-size: 0.9rem;
+  }
+}

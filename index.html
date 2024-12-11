@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Find Your Fit</title>
+  </head>
+  <body>
+    <div class="heat-solution-container">
+      <div class="heat-solution-header">
+        <h1 class="heat-solution-title">
+          Find The Perfect Heat Solution For Your Needs
+        </h1>
+        <p class="heat-solution-subtitle">
+          Compare fuel types to discover savings with wood pellets.
+        </p>
+      </div>
+
+      <div class="calculator-layout">
+        <div class="user-input-form">
+          <div class="form-field">
+            <label for="fuel">Select Your Fuel</label>
+            <div class="dropdown-wrapper">
+              <select id="fuel" name="fuel">
+                <option value="lpg">LPG</option>
+                <option value="wood">Wood</option>
+                <option value="diesel">Diesel</option>
+                <option value="png">PNG</option>
+                <option value="furnace-oil">Furnace Oil</option>
+                <option value="black-oil">Black Oil</option>
+                <option value="ldo">LDO</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="usage">Fuel Usage - ( Per Hour )</label>
+            <input type="number" id="usage" name="usage" value="30" />
+          </div>
+
+          <button class="calculate-button" onclick="calculateSavings()">
+            Calculate Savings
+          </button>
+        </div>
+
+        <div class="comparison-data-table">
+          <table>
+            <thead>
+              <tr>
+                <th>FUEL</th>
+                <th id="fuel-name">LPG</th>
+                <th>Wood Pellets</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>CALORIFIC VALUE</td>
+                <td id="calorific-value">12000 CV</td>
+                <td>4100 CV</td>
+              </tr>
+              <tr>
+                <td>COST</td>
+                <td id="fuel-cost">--</td>
+                <td id="pellet-cost">--</td>
+              </tr>
+              <tr>
+                <td>FUEL CONSUMPTION</td>
+                <td id="fuel-consumption">30 KG/HR</td>
+                <td id="pellet-consumption">--</td>
+              </tr>
+              <tr>
+                <td>MODEL</td>
+                <td colspan="2" id="burner-model">IB-400 (4,00,000 KCAL/HR)</td>
+              </tr>
+              <tr>
+                <td>HOURLY SAVING</td>
+                <td colspan="2" id="hourly-saving">--</td>
+              </tr>
+              <tr>
+                <td>MONTHLY SAVING</td>
+                <td colspan="2" id="monthly-saving">--</td>
+              </tr>
+              <tr>
+                <td>YEARLY SAVING</td>
+                <td colspan="2" id="yearly-saving">--</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
