@@ -1,12 +1,12 @@
 // Fuel data: calorific value (CV) and cost per kg/liter
 const fuelData = {
   lpg: {calorificValue: 12000, cost: 0},
-  wood: {calorificValue: 2200, cost: 0},
-  diesel: {calorificValue: 9200, cost: 0},
-  png: {calorificValue: 8700, cost: 0},
+  wood: {calorificValue: 2500, cost: 0},
+  diesel: {calorificValue: 11400, cost: 0},
+  png: {calorificValue: 9000, cost: 0},
   furnaceOil: {calorificValue: 10500, cost: 0},
   blackOil: {calorificValue: 10500, cost: 0},
-  ldo: {calorificValue: 10200, cost: 0},
+  ldo: {calorificValue: 10500, cost: 0},
   pellet: {calorificValue: 4100, cost: 0},
 };
 
